@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="Images/Logos/FBD-PS2-EtherDrive-Logo-Dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="Images/Logos/FBD-PS2-EtherDrive-Logo.png">
+    <img src="Images/Logos/FBD-PS2-EtherDrive-Logo.png" alt="FBD PS2-EtherDrive Logo" width="250">
+  </picture>
+</p>
+
 # PS2-EtherDrive
 
 PS2-EtherDrive is a custom internal networking and storage platform for the PlayStation 2 Slim.
