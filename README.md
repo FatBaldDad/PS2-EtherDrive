@@ -12,17 +12,94 @@ PS2-EtherDrive is a custom internal networking and storage platform for the Play
 
 The goal of the project is to modernize PS2 network functionality by integrating a compact OpenWrt-based router and storage platform directly inside the console while still retaining physical Ethernet support through the original network port.
 
-The project is primarily focused on later PS2 Slim "DECKARD" models where native internal HDD solutions are not available.
+This project is primarily focused on later PS2 Slim models where native internal HDD-style solutions are not available.
 
-PS2-EtherDrive is designed around:
+## Project Goals
 
-* HLK-7628N/OpenWrt
-* SMB support
-* UDPBD support
-* Internal USB/microSD storage
-* WiFi bridging
-* Integrated power management
-* Clean internal installation
-* OEM-style fitment and thermal integration
+- Add internal network storage functionality to compatible PS2 Slim consoles
+- Support SMB and UDPBD-style network loading workflows
+- Provide WiFi bridge functionality
+- Retain use of the original PS2 Ethernet port
+- Support internal USB or microSD-based storage options
+- Keep installation as clean and OEM-like as possible
+- Build a documented and repeatable kit-style solution
 
-This repository serves as the public development, documentation, testing, and support hub for the project.
+## Current Status
+
+This project is currently in early development.
+
+Hardware, firmware, installation methods, and compatibility information are subject to change as prototypes are designed, tested, and revised.
+
+## Planned Features
+
+- HLK-7628N based internal router platform
+- OpenWrt-based firmware
+- SMB support
+- UDPBD support
+- WiFi client bridge support
+- Internal storage support
+- PS2 Ethernet passthrough design
+- Power regulation from the PS2 internal power system
+- Installation documentation
+- Recovery and firmware update notes
+- Compatibility testing
+
+## Repository Purpose
+
+This repository is used for:
+
+- Project documentation
+- Development notes
+- Hardware planning
+- Firmware notes
+- Test results
+- Installation research
+- Community feedback
+- Issue tracking
+- Future firmware releases
+
+## Important Notice
+
+Gerber files, production hardware files, and firmware source files are not currently included in this repository.
+
+This project is intended to become a future FBD kit/product. Public documentation will be expanded as the project matures, but manufacturing files may remain private until design and production costs have been recovered.
+
+## Documentation
+
+- [Docs](Docs/README.md)
+- [Hardware](Hardware/README.md)
+- [Firmware](Firmware/README.md)
+- [References](References/README.md)
+- [Test Data](Test-Data/README.md)
+- [Manufacturing](Manufacturing/README.md)
+
+## Compatibility
+
+Initial development is focused on PlayStation 2 Slim consoles, especially later Slim models where traditional internal HDD-style solutions are not practical.
+
+Compatibility will be updated as testing progresses.
+
+## Support and Feedback
+
+Use GitHub Issues for:
+
+- Bug reports
+- Compatibility notes
+- Installation feedback
+- Documentation corrections
+- Feature requests
+
+Use GitHub Discussions for:
+
+- General project discussion
+- Ideas
+- Community testing
+- Installation questions
+
+## Project Status
+
+Experimental / In Development
+
+## Created By
+
+Fat Bald Dad / FBD Retro Game
