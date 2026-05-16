@@ -6,7 +6,12 @@
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4) return;
       var out = {};
-      try { out = JSON.parse(xhr.responseText || '{}'); } catch (e) {}
+      try {
+        out = JSON.parse(xhr.responseText || '{}');
+      } catch (e) {
+        if (window.console && console.error) console.error('EtherDrive API parse error', e, xhr.responseText);
+        setMsg('API response parse error.');
+      }
       done(xhr.status, out);
     };
 
@@ -140,12 +145,13 @@
     function refreshStorageStatus() {
       api('storage_status', {}, function (_, r) {
         if (!r || !r.ok) return;
+        var s = r.storage || {};
         fillGrid('storageStatus', {
-          'Device': r.storage_device,
-          'Mount Path': r.storage_mount,
-          'Share Path': r.share_path,
-          'Auto Mount': r.auto_mount,
-          'Mounted': r.mounted,
+          'Device': s.storage_device,
+          'Mount Path': s.storage_mount,
+          'Share Path': s.share_path,
+          'Auto Mount': s.auto_mount,
+          'Mounted': s.mounted,
           'Format': 'Placeholder'
         });
       });
