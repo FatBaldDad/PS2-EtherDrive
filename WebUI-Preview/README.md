@@ -23,7 +23,7 @@ This folder contains a static, GitHub-previewable mockup of the EtherDrive WebUI
 
 The WebUI mockup can be previewed through GitHub Pages after Pages is enabled for this repository.
 
-[Open the WebUI Preview](https://YOUR-GITHUB-NAME.github.io/YOUR-REPO-NAME/WebUI-Preview/index.html)
+[Open the WebUI Preview]([https://YOUR-GITHUB-NAME.github.io/YOUR-REPO-NAME/WebUI-Preview/index.html](https://github.com/FatBaldDad/PS2-EtherDrive/tree/main/WebUI-Preview))
 
 If GitHub Pages is not enabled yet:
 
