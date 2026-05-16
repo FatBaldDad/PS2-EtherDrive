@@ -1,0 +1,6 @@
+Sheet: 04-USB-Storage-Interface.kicad_sch
+Scope: USB host connector path for storage, VBUS power switch/protection, ESD and filtering.
+Inputs: USB_HOST_D+, USB_HOST_D-, +5V_USB, GND
+Outputs: USB_VBUS_SW, USB_OC# (optional)
+Symbols/Footprints: USB connector, TVS/ESD array, ferrite bead, power switch (if used).
+TODO: verify connector mechanical envelope and exact footprint.
