@@ -19,6 +19,7 @@ define Package/etherdrive-udpfs/description
 endef
 
 define Package/etherdrive-udpfs/install
+# Intentionally empty: runtime files are installed by the udpfsd package.
 true
 endef
 

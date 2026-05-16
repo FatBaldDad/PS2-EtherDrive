@@ -20,6 +20,7 @@ define Package/etherdrive-core/description
 endef
 
 define Package/etherdrive-core/install
+# Intentionally empty: meta package that only aggregates dependencies.
 true
 endef
 

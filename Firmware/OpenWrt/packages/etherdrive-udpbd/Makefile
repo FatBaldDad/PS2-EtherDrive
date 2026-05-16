@@ -19,6 +19,7 @@ define Package/etherdrive-udpbd/description
 endef
 
 define Package/etherdrive-udpbd/install
+# Intentionally empty: runtime files are installed by the udpfsd package.
 true
 endef
 
