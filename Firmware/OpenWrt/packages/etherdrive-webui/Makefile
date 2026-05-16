@@ -10,7 +10,7 @@ define Package/etherdrive-webui
   SECTION:=net
   CATEGORY:=Network
   TITLE:=PS2-EtherDrive lightweight WebUI and mode/storage management
-  DEPENDS:=+uhttpd +uci +iwinfo +block-mount +kmod-usb-core +kmod-usb2 +kmod-usb-storage +kmod-fs-ext4 +kmod-fs-vfat +e2fsprogs +dosfstools +blkid +mount-utils +etherdrive-smb1 +udpfsd
+  DEPENDS:=+uhttpd +uci +iwinfo +block-mount +kmod-usb-core +kmod-usb2 +kmod-usb-storage +kmod-fs-ext4 +kmod-fs-vfat +e2fsprogs +dosfstools +blkid +mount-utils +etherdrive-smb1 +etherdrive-udpfs +etherdrive-udpbd
 endef
 
 define Package/etherdrive-webui/description
