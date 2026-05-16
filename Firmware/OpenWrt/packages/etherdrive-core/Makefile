@@ -10,7 +10,11 @@ define Package/etherdrive-core
   SECTION:=net
   CATEGORY:=Network
   TITLE:=PS2-EtherDrive core firmware package set
-  DEPENDS:=+uhttpd +block-mount +kmod-usb-core +kmod-usb2 +kmod-usb-storage +kmod-fs-ext4 +kmod-fs-vfat +e2fsprogs +dosfstools +blkid +samba36-server +etherdrive-smb1 +etherdrive-udpfs +etherdrive-udpbd +etherdrive-webui
+  DEPENDS:= \
+	+uhttpd +block-mount +samba36-server \
+	+kmod-usb-core +kmod-usb2 +kmod-usb-storage \
+	+kmod-fs-ext4 +kmod-fs-vfat +e2fsprogs +dosfstools +blkid \
+	+etherdrive-smb1 +etherdrive-udpfs +etherdrive-udpbd +etherdrive-webui
 endef
 
 define Package/etherdrive-core/description
