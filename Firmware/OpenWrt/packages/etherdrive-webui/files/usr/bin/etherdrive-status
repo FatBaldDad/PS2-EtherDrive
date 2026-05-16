@@ -1,0 +1,74 @@
+#!/bin/sh
+
+set -eu
+
+cfg_get() {
+	uci -q get "etherdrive.main.$1" || true
+}
+
+svc_state() {
+	service="$1"
+	if [ -x "/etc/init.d/$service" ]; then
+		if "/etc/init.d/$service" enabled >/dev/null 2>&1; then
+			echo "enabled"
+		else
+			echo "disabled"
+		fi
+	else
+		echo "not_installed"
+	fi
+}
+
+get_ip() {
+	ip="$(uci -q get network.lan.ipaddr || true)"
+	[ -n "$ip" ] && { echo "$ip"; return; }
+	ip -4 addr show br-lan 2>/dev/null | awk '/inet /{print $2}' | cut -d/ -f1 | head -n1
+}
+
+get_gateway() {
+	gw="$(cfg_get gateway)"
+	[ -n "$gw" ] && { echo "$gw"; return; }
+	ip route 2>/dev/null | awk '/default/{print $3; exit}'
+}
+
+get_wifi_ssid() {
+	ssid="$(cfg_get wifi_ssid)"
+	[ -n "$ssid" ] && { echo "$ssid"; return; }
+	uci -q get wireless.@wifi-iface[0].ssid || true
+}
+
+eth_link() {
+	if [ -r /sys/class/net/eth0/carrier ]; then
+		val="$(cat /sys/class/net/eth0/carrier 2>/dev/null || echo 0)"
+		[ "$val" = "1" ] && echo "up" || echo "down"
+	else
+		echo "unknown"
+	fi
+}
+
+storage_mounted() {
+	mnt="$(cfg_get storage_mount)"
+	[ -n "$mnt" ] || mnt="/mnt/etherdrive"
+	if grep -qs " $mnt " /proc/mounts; then
+		echo "yes"
+	else
+		echo "no"
+	fi
+}
+
+mode="$(cfg_get mode)"
+[ -n "$mode" ] || mode="wifi_only"
+
+printf '{'
+printf '"ok":true,'
+printf '"first_boot_done":"%s",' "$(cfg_get first_boot_done)"
+printf '"ip":"%s",' "$(get_ip)"
+printf '"gateway":"%s",' "$(get_gateway)"
+printf '"wifi_ssid":"%s",' "$(get_wifi_ssid)"
+printf '"eth_link":"%s",' "$(eth_link)"
+printf '"storage_mounted":"%s",' "$(storage_mounted)"
+printf '"mode":"%s",' "$mode"
+printf '"smb1":"%s",' "$(svc_state samba)"
+printf '"udpbd":"%s",' "$(svc_state udpfsd)"
+printf '"udpfs":"%s"' "$(svc_state udpfsd)"
+printf '}'
