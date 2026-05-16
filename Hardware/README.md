@@ -77,6 +77,9 @@ RF shield modifications, thermal integration research, and mounting concepts.
 ## Mechanical/
 Mechanical fitment research, installation planning, and mounting concepts.
 
+## KiCAD/
+KiCad project structure, libraries, fabrication organization, and PCB documentation for EtherDrive hardware designs.
+
 ---
 
 # HLK-7628N Platform
@@ -155,4 +158,3 @@ Possible future hardware directions may include:
 Hardware designs, layouts, and installation methods are subject to change during development.
 
 Gerber files, manufacturing files, and production PCB data may remain private during early development and production phases.
-
