@@ -21,4 +21,15 @@ This folder contains a static, GitHub-previewable mockup of the EtherDrive WebUI
 
 ## Previewing in a browser
 
-Open `index.html` directly in a browser, or enable GitHub Pages for the repository and browse to `WebUI-Preview/index.html`.
+The WebUI mockup can be previewed through GitHub Pages after Pages is enabled for this repository.
+
+[Open the WebUI Preview](https://YOUR-GITHUB-NAME.github.io/YOUR-REPO-NAME/WebUI-Preview/index.html)
+
+If GitHub Pages is not enabled yet:
+
+1. Open the repository on GitHub.
+2. Go to **Settings**.
+3. Go to **Pages**.
+4. Set **Source** to **Deploy from a branch**.
+5. Set **Branch** to **main** and folder to **/root**.
+6. Save the settings.
