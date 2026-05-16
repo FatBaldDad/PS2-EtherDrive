@@ -14,6 +14,8 @@ The goal of the project is to modernize PS2 network functionality by integrating
 
 This project is primarily focused on later PS2 Slim models where native internal HDD-style solutions are not available.
 
+[Open the EtherDrive WebUI Preview](https://fatbalddad.github.io/PS2-EtherDrive/WebUI-Preview/index.html)
+
 ## Project Goals
 
 - Add internal network storage functionality to compatible PS2 Slim consoles
