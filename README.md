@@ -72,6 +72,9 @@ This project is intended to become a future FBD kit/product. Public documentatio
 - [References](References/README.md)
 - [Test Data](Test-Data/README.md)
 - [Manufacturing](Manufacturing/README.md)
+- [WebUI Preview](WebUI-Preview/index.html)
+
+GitHub Pages can be enabled to preview the static WebUI in a browser at `WebUI-Preview/index.html`.
 
 ## Compatibility
 

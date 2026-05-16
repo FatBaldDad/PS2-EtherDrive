@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PS2-EtherDrive Preview - Home</title>
+  <link rel="stylesheet" href="assets/etherdrive.css">
+</head>
+<body data-page="index">
+  <div class="shell">
+    <header class="hero">
+      <p class="eyebrow">PS2-inspired interface</p>
+      <div class="hero__title-row">
+        <div>
+          <h1>PS2-EtherDrive WebUI</h1>
+          <p class="hero__subtitle">Static preview dashboard for GitHub Pages and local browser testing.</p>
+        </div>
+        <span class="badge">Preview only</span>
+      </div>
+    </header>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="setup.html">Setup</a>
+      <a href="status.html">Status</a>
+      <a href="modes.html">Modes</a>
+      <a href="storage.html">Storage</a>
+      <a href="update.html">Update</a>
+    </nav>
+
+    <main class="layout">
+      <section class="panel panel--wide">
+        <div class="panel__header">
+          <div>
+            <p class="panel__kicker">System overview</p>
+            <h2>Quick Status</h2>
+          </div>
+          <button type="button" class="button button--ghost" id="refreshOverviewBtn">Refresh demo data</button>
+        </div>
+        <div class="status-grid" id="quickStatus"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="panel__kicker">First boot</p>
+            <h2>Quick Setup Shortcuts</h2>
+          </div>
+        </div>
+        <div class="button-stack">
+          <a class="button" href="setup.html">Open WiFi + Static IP Setup</a>
+          <a class="button button--ghost" href="storage.html">Open Storage Setup</a>
+          <a class="button button--ghost" href="update.html">Open OTA Update Mockup</a>
+        </div>
+        <p class="helper">Backend saves, scans, and service changes are shown as <strong>Preview only</strong>.</p>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="panel__kicker">Mode control</p>
+            <h2>Current Service Mode</h2>
+          </div>
+        </div>
+        <div id="modeSummary" class="mode-summary"></div>
+        <div class="button-row button-row--wrap">
+          <button type="button" class="button mode-button" data-mode="wifi_only">WiFi Only</button>
+          <button type="button" class="button mode-button" data-mode="udpbd">UDPBD</button>
+          <button type="button" class="button mode-button" data-mode="smb1">SMB1</button>
+          <button type="button" class="button mode-button" data-mode="udpfs">UDPFS</button>
+        </div>
+        <p class="helper">Mode buttons update the shared preview state in your browser.</p>
+      </section>
+
+      <section class="panel panel--wide">
+        <div class="panel__header">
+          <div>
+            <p class="panel__kicker">Notes</p>
+            <h2>Preview Behavior</h2>
+          </div>
+        </div>
+        <ul class="feature-list">
+          <li>All links are relative, so the preview works from GitHub Pages or a local file path.</li>
+          <li>Forms use demo JavaScript data instead of OpenWrt, CGI, Lua, PHP, or other backend scripts.</li>
+          <li>Anything that would normally scan hardware, save settings, or flash firmware is clearly marked <strong>Preview only</strong>.</li>
+        </ul>
+        <p class="message" id="message" aria-live="polite"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/etherdrive.js"></script>
+</body>
+</html>

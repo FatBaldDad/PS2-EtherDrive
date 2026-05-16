@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PS2-EtherDrive Preview - Storage</title>
+  <link rel="stylesheet" href="assets/etherdrive.css">
+</head>
+<body data-page="storage">
+  <div class="shell">
+    <header class="hero">
+      <p class="eyebrow">Media management</p>
+      <div class="hero__title-row">
+        <div>
+          <h1>Storage Setup</h1>
+          <p class="hero__subtitle">Configure demo storage paths, mount preferences, and game share options.</p>
+        </div>
+        <span class="badge">Preview only</span>
+      </div>
+    </header>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="setup.html">Setup</a>
+      <a href="status.html">Status</a>
+      <a href="modes.html">Modes</a>
+      <a href="storage.html" class="active">Storage</a>
+      <a href="update.html">Update</a>
+    </nav>
+
+    <main class="layout layout--two-column">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="panel__kicker">Device selection</p>
+            <h2>Storage Setup</h2>
+          </div>
+          <button type="button" class="button button--ghost" id="scanStorageBtn">Scan devices · Preview only</button>
+        </div>
+        <form id="storageForm" class="form-grid">
+          <label>
+            <span>Storage Device</span>
+            <select id="storageDevice" name="storageDevice"></select>
+          </label>
+          <label>
+            <span>Filesystem</span>
+            <select id="storageFilesystem" name="storageFilesystem">
+              <option value="exfat">exFAT</option>
+              <option value="ext4">ext4</option>
+              <option value="fat32">FAT32</option>
+            </select>
+          </label>
+          <label>
+            <span>Mount Path</span>
+            <input id="storageMount" name="storageMount" type="text" value="/mnt/etherdrive">
+          </label>
+          <label>
+            <span>Game Share Name</span>
+            <input id="shareName" name="shareName" type="text" value="PS2SMB">
+          </label>
+          <label class="checkbox">
+            <input id="autoMount" name="autoMount" type="checkbox" checked>
+            <span>Auto-mount on boot</span>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="button">Save Storage Setup · Preview only</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="panel__kicker">Drive overview</p>
+            <h2>Detected Media</h2>
+          </div>
+        </div>
+        <div class="status-grid" id="storageStatus"></div>
+        <div class="callout">
+          <p>Formatting, partitioning, and real mount checks are <strong>Preview only</strong>.</p>
+        </div>
+        <p class="message" id="message" aria-live="polite"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/etherdrive.js"></script>
+</body>
+</html>
