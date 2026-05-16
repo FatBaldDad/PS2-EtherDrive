@@ -101,6 +101,10 @@
       pad(date.getHours()) + ':' + pad(date.getMinutes()) + ':' + pad(date.getSeconds());
   }
 
+  function formatUtcTimestamp(date) {
+    return formatTimestamp(date) + ' UTC';
+  }
+
   function pad(value) {
     return value < 10 ? '0' + value : String(value);
   }
@@ -319,7 +323,7 @@
       state.wifi.selected = document.getElementById('wifiNetwork').value;
       state.wifi.security = document.getElementById('wifiSecurity').value;
       state.wifi.region = document.getElementById('wifiRegion').value;
-      state.update.lastCheck = formatTimestamp(new Date()) + ' UTC';
+      state.update.lastCheck = formatUtcTimestamp(new Date());
       saveState();
       renderSharedViews();
       setMessage('Preview only: WiFi setup saved in browser storage. Password input stays local to the page.');
@@ -405,7 +409,7 @@
       if (selectedFile) {
         state.update.packageName = selectedFile.name;
       }
-      state.update.lastCheck = formatTimestamp(new Date()) + ' UTC';
+      state.update.lastCheck = formatUtcTimestamp(new Date());
       saveState();
       renderSharedViews();
       setMessage('Preview only: firmware image verified.');
