@@ -14,7 +14,7 @@ define Package/etherdrive-webui
 	+uhttpd +uci +iwinfo +block-mount +mount-utils \
 	+kmod-usb-core +kmod-usb2 +kmod-usb-storage \
 	+kmod-fs-ext4 +kmod-fs-vfat +e2fsprogs +dosfstools +blkid \
-	+etherdrive-smb1 +etherdrive-udpfs +etherdrive-udpbd
+	+etherdrive-smb1 +etherdrive-udpfs
 endef
 
 define Package/etherdrive-webui/description

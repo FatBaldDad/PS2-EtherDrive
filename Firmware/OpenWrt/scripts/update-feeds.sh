@@ -9,4 +9,4 @@ cd "$OPENWRT_DIR"
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-echo "Feeds updated and EtherDrive packages installed"
+echo "Feeds updated and packages installed"
