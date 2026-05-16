@@ -400,7 +400,11 @@
     });
 
     document.getElementById('verifyUpdateBtn').addEventListener('click', function () {
-      state.update.packageName = document.getElementById('firmwareImage').files[0] ? document.getElementById('firmwareImage').files[0].name : state.update.packageName;
+      var firmwareInput = document.getElementById('firmwareImage');
+      var selectedFile = firmwareInput.files[0];
+      if (selectedFile) {
+        state.update.packageName = selectedFile.name;
+      }
       state.update.lastCheck = formatTimestamp(new Date()) + ' UTC';
       saveState();
       renderSharedViews();
