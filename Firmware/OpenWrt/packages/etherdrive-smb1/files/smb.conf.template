@@ -17,6 +17,8 @@ guest ok = yes
 # Force SMB1/NT1 protocol compatibility for PlayStation 2 OPL.
 server min protocol = NT1
 server max protocol = NT1
+# Client protocol bounds are kept for Samba client tools on builds that
+# support these directives; unsupported versions safely ignore them.
 client min protocol = NT1
 client max protocol = NT1
 
