@@ -1,27 +1,54 @@
-# TODO Verification Register
+# TODO Verification
 
-## Critical Unknowns
+## Schematic Hierarchy Completion
 
-- [ ] Confirm HLK-7628N official pinout and power pin naming
-- [ ] Confirm final USB connector footprint selection and mechanical envelope
-- [ ] Confirm Ethernet magnetics part number and package dimensions
-- [ ] Confirm 0.8mm board availability and constraints at OSH Park for this stack-up
-- [ ] Confirm TPS54331 passive network values against target VIN and load profile
+- [ ] Create top-level KiCad 9 project/schematic files and instantiate all 7 child sheets.
+- [ ] Define and connect cross-sheet hierarchical labels for power, Ethernet, USB, PS2, UART, reset, and status.
+- [ ] Run ERC after each subsystem is captured.
 
-## Library Verification
+## Subsystem Verification Gates
 
-- [ ] Create final symbols only from verified datasheets
-- [ ] Create final footprints only from verified land pattern guidance
-- [ ] Run KiCad symbol/footprint pin mapping cross-check before schematic capture
+### 1) Power Section
+- [ ] Confirm PS2 source behavior around nominal ~8.5 V (startup, dips, and transients).
+- [ ] Confirm 3.3 V regulator design margin and thermal behavior.
+- [ ] Confirm USB 5 V rail generation/distribution approach and current budget.
+- [ ] Verify TVS/ferrite choices and footprints.
 
-## Manufacturing Verification
+### 2) HLK-7628N Core
+- [ ] Verify module pinout and naming for exact revision.
+- [ ] Verify boot/reset strap defaults.
+- [ ] Verify all decoupling placement requirements.
 
-- [ ] Validate DRC rules against OSH Park capability limits
-- [ ] Validate silkscreen legibility for hand assembly
-- [ ] Validate assembly clearances around module and connector keepouts
+### 3) Ethernet Interface
+- [ ] Verify magnetics/RJ45 topology and pin mapping.
+- [ ] Verify ESD/TVS low-capacitance selection.
+- [ ] Verify any common-mode termination network requirements.
 
-## BOM Verification
+### 4) USB Storage Interface
+- [ ] Verify connector footprint and retention tabs.
+- [ ] Verify VBUS protection/switching behavior.
+- [ ] Verify ESD protection devices and placement.
 
-- [ ] Replace all `TBD` manufacturer/MPN fields
-- [ ] Populate Digi-Key part numbers for each production-fitted component
-- [ ] Mark DNP placeholders clearly before first prototype release
+### 5) PS2 Interface
+- [ ] Verify PS2 connector/net mapping against hardware references.
+- [ ] Verify any required level conditioning or protection.
+
+### 6) UART/Debug/Recovery
+- [ ] Verify UART header pinout and voltage labeling.
+- [ ] Verify reset/recovery controls and pull networks.
+
+### 7) Status LEDs
+- [ ] Verify GPIO assignments for LED functions.
+- [ ] Verify resistor values for acceptable brightness/current.
+
+## Footprint and Packaging Controls
+
+- [ ] Do not finalize any custom footprint until datasheet dimensions are verified.
+- [ ] Add TODO notes for any package still using placeholder dimensions.
+- [ ] Confirm 0603 usage except where electrical or mechanical constraints require alternatives.
+
+## PCB/Fabrication Targets
+
+- [ ] Confirm 2-layer rules and return-path strategy for mixed power/high-speed sections.
+- [ ] Confirm 0.8 mm stack-up availability for selected board house.
+- [ ] Confirm OSH Park compatibility settings before routing lock.
