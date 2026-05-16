@@ -18,6 +18,6 @@ fi
 
 find "$OUT_DIR/targets" -type f \( -name '*sysupgrade*.bin' -o -name '*sysupgrade*.img' \) | grep -q . && \
 echo "Sysupgrade image(s) packaged" || \
-echo "No sysupgrade image found for current profile/target"
+echo "No sysupgrade image found for current profile/target" >&2
 
 echo "Release artifacts staged in: $OUT_DIR"
