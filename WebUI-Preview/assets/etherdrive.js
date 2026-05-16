@@ -30,7 +30,6 @@
         networks: ['RetroNet_5G', 'LivingRoomPS2', 'Workshop_AP'],
         selected: 'RetroNet_5G',
         security: 'WPA2-PSK',
-        password: 'etherdrive-demo',
         region: 'US',
         signal: '88%'
       },
@@ -303,7 +302,6 @@
   function initSetup() {
     populateSelect('wifiNetwork', state.wifi.networks, state.wifi.selected);
     document.getElementById('wifiSecurity').value = state.wifi.security;
-    document.getElementById('wifiPassword').value = state.wifi.password;
     document.getElementById('wifiRegion').value = state.wifi.region;
     document.getElementById('deviceIp').value = state.network.ip;
     document.getElementById('subnetMask').value = state.network.subnet;
@@ -320,12 +318,11 @@
       event.preventDefault();
       state.wifi.selected = document.getElementById('wifiNetwork').value;
       state.wifi.security = document.getElementById('wifiSecurity').value;
-      state.wifi.password = document.getElementById('wifiPassword').value;
       state.wifi.region = document.getElementById('wifiRegion').value;
       state.update.lastCheck = formatTimestamp(new Date()) + ' UTC';
       saveState();
       renderSharedViews();
-      setMessage('Preview only: WiFi setup saved in browser storage.');
+      setMessage('Preview only: WiFi setup saved in browser storage. Password input stays local to the page.');
     });
 
     document.getElementById('ipSetupForm').addEventListener('submit', function (event) {
