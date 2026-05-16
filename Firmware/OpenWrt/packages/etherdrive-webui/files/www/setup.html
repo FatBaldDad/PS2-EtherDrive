@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EtherDrive - First Boot Setup</title>
+  <link rel="stylesheet" href="/assets/etherdrive.css">
+</head>
+<body data-page="setup">
+  <header class="topbar">
+    <h1>First Boot Setup</h1>
+    <p>PS2 EtherDrive Initial Network Setup</p>
+  </header>
+
+  <nav class="nav">
+    <a href="/index.html">Home</a>
+    <a href="/setup.html" class="active">Setup</a>
+    <a href="/status.html">Status</a>
+    <a href="/storage.html">Storage</a>
+    <a href="/update.html">Update</a>
+  </nav>
+
+  <main class="panel">
+    <form id="setupForm">
+      <h2>WiFi</h2>
+      <div class="row">
+        <button type="button" id="scanWifiBtn">Scan WiFi SSIDs</button>
+      </div>
+      <label for="wifi_ssid">WiFi SSID</label>
+      <select id="wifi_ssid" name="wifi_ssid">
+        <option value="">-- Select SSID --</option>
+      </select>
+
+      <label for="wifi_password">WiFi Password</label>
+      <input id="wifi_password" name="wifi_password" type="password" autocomplete="current-password">
+
+      <h2>Static LAN/IP</h2>
+      <label for="ps2_ip">EtherDrive IP</label>
+      <input id="ps2_ip" name="ps2_ip" type="text" value="192.168.1.199">
+
+      <label for="gateway">Gateway</label>
+      <input id="gateway" name="gateway" type="text" value="192.168.1.1">
+
+      <label for="subnet">Subnet</label>
+      <input id="subnet" name="subnet" type="text" value="255.255.255.0">
+
+      <button type="submit">Save and Apply</button>
+      <button type="button" id="saveRebootBtn">Save and Reboot</button>
+    </form>
+
+    <p class="warn">Reboot is recommended after first setup.</p>
+    <p id="message" class="message"></p>
+  </main>
+
+  <script src="/assets/etherdrive.js"></script>
+</body>
+</html>

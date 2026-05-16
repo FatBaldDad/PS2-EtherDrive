@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EtherDrive - Home</title>
+  <link rel="stylesheet" href="/assets/etherdrive.css">
+</head>
+<body data-page="index">
+  <header class="topbar">
+    <h1>PS2 EtherDrive</h1>
+    <p>Network + Storage Control</p>
+  </header>
+
+  <nav class="nav">
+    <a href="/index.html" class="active">Home</a>
+    <a href="/setup.html">Setup</a>
+    <a href="/status.html">Status</a>
+    <a href="/storage.html">Storage</a>
+    <a href="/update.html">Update</a>
+  </nav>
+
+  <main class="panel">
+    <h2>Quick Status</h2>
+    <div id="quickStatus" class="grid"></div>
+
+    <h2>Mode Selection</h2>
+    <form id="modeForm">
+      <label><input type="radio" name="mode" value="wifi_only"> WiFi Only (all game services off)</label>
+      <label><input type="radio" name="mode" value="smb1"> SMB1 Mode</label>
+      <label><input type="radio" name="mode" value="udpbd"> UDPBD Mode</label>
+      <label><input type="radio" name="mode" value="udpfs"> UDPFS Mode</label>
+      <button type="submit">Apply Mode</button>
+    </form>
+
+    <p class="note">Only one game service mode should be active at a time.</p>
+    <p id="message" class="message"></p>
+  </main>
+
+  <script src="/assets/etherdrive.js"></script>
+</body>
+</html>

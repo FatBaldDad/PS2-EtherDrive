@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EtherDrive - Storage</title>
+  <link rel="stylesheet" href="/assets/etherdrive.css">
+</head>
+<body data-page="storage">
+  <header class="topbar">
+    <h1>Storage Setup</h1>
+    <p>USB 2.0 and microSD/SD storage configuration</p>
+  </header>
+
+  <nav class="nav">
+    <a href="/index.html">Home</a>
+    <a href="/setup.html">Setup</a>
+    <a href="/status.html">Status</a>
+    <a href="/storage.html" class="active">Storage</a>
+    <a href="/update.html">Update</a>
+  </nav>
+
+  <main class="panel">
+    <form id="storageForm">
+      <h2>Detected Devices</h2>
+      <button type="button" id="scanStorageBtn">Scan Storage Devices</button>
+      <label for="storage_device">Storage Device</label>
+      <select id="storage_device" name="storage_device">
+        <option value="">-- Select device --</option>
+      </select>
+
+      <label for="storage_mount">Mount Path</label>
+      <input id="storage_mount" name="storage_mount" type="text" value="/mnt/etherdrive">
+
+      <label for="share_name">Default Game Share Path</label>
+      <input id="share_name" name="share_name" type="text" value="PS2SMB">
+
+      <label><input id="auto_mount" name="auto_mount" type="checkbox" checked> Auto-mount on boot</label>
+
+      <button type="submit">Save Storage Settings</button>
+    </form>
+
+    <h2>Format / Status</h2>
+    <p class="note">Format and advanced filesystem management are placeholders in this first version.</p>
+    <div id="storageStatus" class="grid"></div>
+    <p id="message" class="message"></p>
+  </main>
+
+  <script src="/assets/etherdrive.js"></script>
+</body>
+</html>
