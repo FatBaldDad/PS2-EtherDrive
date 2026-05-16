@@ -9,7 +9,7 @@
       try {
         out = JSON.parse(xhr.responseText || '{}');
       } catch (e) {
-        if (window.console && console.error) console.error('EtherDrive API parse error', e, xhr.responseText);
+        if (typeof console !== 'undefined' && console.error) console.error('EtherDrive API parse error', e, xhr.responseText);
         setMsg('API response parse error.');
       }
       done(xhr.status, out);

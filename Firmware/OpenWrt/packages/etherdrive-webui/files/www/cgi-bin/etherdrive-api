@@ -96,7 +96,7 @@ case "$action" in
 			ssids="$(
 				{
 					iwinfo wlan0 scan 2>/dev/null || iwinfo 2>/dev/null
-				} | sed -n 's/.*ESSID: \"\\(.*\\)\"/\\1/p' | awk 'NF && !seen[$0]++'
+				} | sed -n 's/.*ESSID: \"\(.*\)\"/\1/p' | awk 'NF && !seen[$0]++'
 			)"
 			echo -n '{"ok":true,"ssids":'
 			printf '%s\n' "$ssids" | json_array_from_lines
