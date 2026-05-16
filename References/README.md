@@ -49,6 +49,15 @@ Possible contents include:
 
 ---
 
+## Third-Party-Licenses/
+License files for optional third-party packages integrated with PS2-EtherDrive.
+
+Contents include:
+
+- udpfsd BSD-3-Clause license (pcm720)
+
+---
+
 ## PS2-Ethernet/
 Research related to PlayStation 2 Ethernet hardware and integration.
 
