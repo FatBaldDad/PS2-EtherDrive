@@ -105,6 +105,14 @@
     return formatTimestamp(date) + ' UTC';
   }
 
+  function stampState(options) {
+    var date = new Date();
+    state.system.lastRefresh = formatTimestamp(date);
+    if (options && options.updateLastCheck) {
+      state.update.lastCheck = formatUtcTimestamp(date);
+    }
+  }
+
   function pad(value) {
     return value < 10 ? '0' + value : String(value);
   }
@@ -118,7 +126,7 @@
 
   function setMode(mode) {
     state.mode = mode;
-    state.system.lastRefresh = formatTimestamp(new Date());
+    stampState();
     saveState();
     renderSharedViews();
     setMessage('Preview only: mode switched to ' + MODE_DETAILS[mode].title + '.');
@@ -323,7 +331,7 @@
       state.wifi.selected = document.getElementById('wifiNetwork').value;
       state.wifi.security = document.getElementById('wifiSecurity').value;
       state.wifi.region = document.getElementById('wifiRegion').value;
-      state.update.lastCheck = formatUtcTimestamp(new Date());
+      stampState({ updateLastCheck: true });
       saveState();
       renderSharedViews();
       setMessage('Preview only: WiFi setup saved in browser storage. Password input stays local to the page.');
@@ -335,7 +343,7 @@
       state.network.subnet = document.getElementById('subnetMask').value;
       state.network.gateway = document.getElementById('gatewayIp').value;
       state.network.dns = document.getElementById('dnsIp').value;
-      state.system.lastRefresh = formatTimestamp(new Date());
+      stampState();
       saveState();
       renderSharedViews();
       setMessage('Preview only: static IP settings updated.');
@@ -387,6 +395,7 @@
       state.storage.mountPath = document.getElementById('storageMount').value;
       state.storage.shareName = document.getElementById('shareName').value;
       state.storage.autoMount = document.getElementById('autoMount').checked;
+      stampState();
       saveState();
       renderSharedViews();
       setMessage('Preview only: storage settings saved.');
@@ -398,6 +407,7 @@
 
     document.getElementById('updateChannel').addEventListener('change', function (event) {
       state.update.channel = event.target.value;
+      stampState({ updateLastCheck: true });
       saveState();
       renderSharedViews();
       setMessage('Preview only: update channel changed to ' + state.update.channel + '.');
@@ -409,7 +419,7 @@
       if (selectedFile) {
         state.update.packageName = selectedFile.name;
       }
-      state.update.lastCheck = formatUtcTimestamp(new Date());
+      stampState({ updateLastCheck: true });
       saveState();
       renderSharedViews();
       setMessage('Preview only: firmware image verified.');
