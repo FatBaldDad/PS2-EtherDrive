@@ -93,10 +93,12 @@ case "$action" in
 		;;
 	wifi_scan)
 		if command -v iwinfo >/dev/null 2>&1; then
+			iface="$(iwinfo 2>/dev/null | awk '/ESSID:/{gsub(/:$/,"",$1); print $1; exit}')"
 			ssids="$(
 				{
-					iwinfo wlan0 scan 2>/dev/null || iwinfo 2>/dev/null
-				} | sed -n 's/.*ESSID: \"\(.*\)\"/\1/p' | awk 'NF && !seen[$0]++'
+					[ -n "$iface" ] && iwinfo "$iface" scan 2>/dev/null || true
+					iwinfo 2>/dev/null
+				} | awk -F'ESSID: ' '/ESSID: /{ssid=$2; gsub(/^"|"$|^[ \t]+|[ \t]+$/,"",ssid); if(ssid!="" && ssid!="unknown") print ssid}' | awk '!seen[$0]++'
 			)"
 			echo -n '{"ok":true,"ssids":'
 			printf '%s\n' "$ssids" | json_array_from_lines
