@@ -1,0 +1,20 @@
+Item,Designators,Qty,Value,Description,Manufacturer,MPN,Digi-Key PN,Package,Section,Preferred Supplier,Assembly Notes,Status
+1,U?,1,,Buck converter IC (3.3V rail),Texas Instruments,TPS54331DR,,SOIC-8,TPS54331 buck converter section,Digi-Key,Primary switcher controller,TODO-VERIFY
+2,L?,1,22uH,Power inductor for TPS54331 stage,TBD,TBD,,TBD,TPS54331 buck converter section,Digi-Key,Select current rating with margin,TODO-VERIFY
+3,D?,1,,Schottky diode for buck stage,TBD,TBD,,SMA/SMB TBD,TPS54331 buck converter section,Digi-Key,Verify Vf and current rating,TODO-VERIFY
+4,C?,2,10uF,Input/output bulk capacitors for buck stage,TBD,TBD,,0603/0805 TBD,TPS54331 buck converter section,Digi-Key,Prefer 0603 where ripple allows,TODO-VERIFY
+5,R?,2,,Buck feedback divider resistors,TBD,TBD,,0603,TPS54331 buck converter section,Digi-Key,Set final output voltage,TODO-VERIFY
+6,C?,2,0.1uF,USB input high-frequency filtering capacitors,TBD,TBD,,0603,USB power filtering,Digi-Key,Place near USB power entry,TODO-VERIFY
+7,C?,1,10uF,USB input bulk capacitor,TBD,TBD,,0805 or 1206 TBD,USB power filtering,Digi-Key,Verify inrush/transient behavior,TODO-VERIFY
+8,FB?,1,,USB power ferrite bead,TBD,TBD,,0603/0805 TBD,USB power filtering,Digi-Key,Confirm impedance/current,TODO-VERIFY
+9,C?,4,0.1uF,HLK-7628N local decoupling capacitors,TBD,TBD,,0603,HLK-7628N decoupling capacitors,Digi-Key,Place close to module power pins,TODO-VERIFY
+10,C?,2,1uF,HLK-7628N mid-frequency decoupling capacitors,TBD,TBD,,0603,HLK-7628N decoupling capacitors,Digi-Key,Power rail local support,TODO-VERIFY
+11,C?,1,10uF,HLK-7628N bulk decoupling capacitor,TBD,TBD,,0805 TBD,HLK-7628N decoupling capacitors,Digi-Key,Module rail bulk storage,TODO-VERIFY
+12,T?,1,,Ethernet magnetics module placeholder,TBD,TBD,,TBD,Ethernet magnetics placeholders,Digi-Key,Match target RJ45/transformer topology,TODO-VERIFY
+13,R?,2,49.9R,ETH differential impedance termination placeholders,TBD,TBD,,0603,Ethernet magnetics placeholders,Digi-Key,Verify against PHY reference design,TODO-VERIFY
+14,J?,1,,USB connector,TBD,TBD,,TBD,USB connector,Digi-Key,Confirm mechanical envelope and pinout,TODO-VERIFY
+15,D?,2,,Status LEDs (power/activity),TBD,TBD,,0603,status LEDs,Digi-Key,Green/amber typical,TODO-VERIFY
+16,R?,2,1k,LED current limit resistors,TBD,TBD,,0603,status LEDs,Digi-Key,Tune brightness after bring-up,TODO-VERIFY
+17,SW?,1,,Reset pushbutton,TBD,TBD,,TBD,reset circuitry,Digi-Key,Accessible for enclosure service,TODO-VERIFY
+18,R?,1,10k,Reset pull-up resistor,TBD,TBD,,0603,reset circuitry,Digi-Key,Verify against reset topology,TODO-VERIFY
+19,C?,1,0.1uF,Reset RC debounce/filter capacitor,TBD,TBD,,0603,reset circuitry,Digi-Key,Confirm required reset pulse width,TODO-VERIFY
