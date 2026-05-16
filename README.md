@@ -17,7 +17,7 @@ This project is primarily focused on later PS2 Slim models where native internal
 ## Project Goals
 
 - Add internal network storage functionality to compatible PS2 Slim consoles
-- Support SMB and UDPBD-style network loading workflows
+- Support SMB and UDPBD/UDPFS-style network loading workflows
 - Provide WiFi bridge functionality
 - Retain use of the original PS2 Ethernet port
 - Support internal USB or microSD-based storage options
@@ -35,7 +35,7 @@ Hardware, firmware, installation methods, and compatibility information are subj
 - HLK-7628N based internal router platform
 - OpenWrt-based firmware
 - SMB support
-- UDPBD support
+- UDPBD/UDPFS support
 - WiFi client bridge support
 - Internal storage support
 - PS2 Ethernet passthrough design
