@@ -47,6 +47,16 @@ Hardware, firmware, installation methods, and compatibility information are subj
 - Recovery and firmware update notes
 - Compatibility testing
 
+## Additional Features (Future)
+
+- General-purpose usage mode with the ability to store and share other file types on your home network.
+- MMCE microSD card setup option that can prepare a formatted microSD card for use with MMCE, including preconfigured EtherDrive files or card images.
+- Optional MMCE setup selections for other consoles or MMCE-compatible devices.
+- MMCE firmware/update support from SD2PSXTD GitHub when internet access is available.
+- Built-in fallback to the last stable release if internet access is not available or an update fails.
+- Optional DIY build versions, including PS2 trimmed-shell builds or “Can of ETHER” themed external builds.
+- Firmware builds for other compatible router platforms using the same general WebUI with hardware-specific options.
+
 ## Repository Purpose
 
 This repository is used for:
