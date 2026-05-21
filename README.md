@@ -16,13 +16,6 @@ This project is primarily focused on later PS2 Slim models where native internal
 
 [Open the EtherDrive WebUI Preview](https://fatbalddad.github.io/PS2-EtherDrive/WebUI-Preview/)
 
-## Internal EtherDrive System Breakdown
-
-The internal EtherDrive base design is focused on PS2 Slim 70k to 77k models.
-
-This version uses the HLK-7628N as the internal OpenWrt router/storage controller, direct microSD storage over SDIO, and a WebUI as the primary control interface.
-
-The internal base version does not require a touchscreen, USB hub, or external display. Those features are treated as optional expansion features for later external or premium versions.
 
 ## Project Goals
 
