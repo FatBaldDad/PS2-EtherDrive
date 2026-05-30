@@ -1,6 +1,0 @@
-Sheet: 07-Status-LEDs.kicad_sch
-Scope: power/activity/status LEDs and current limiting resistors.
-Inputs: +3V3_MAIN, ETH_LED_LINK, ETH_LED_ACT, SYS_STATUS_GPIO, GND
-Outputs: none
-Symbols/Footprints: 0603 LEDs, 0603 resistors.
-TODO: verify LED color/bin and brightness targets.

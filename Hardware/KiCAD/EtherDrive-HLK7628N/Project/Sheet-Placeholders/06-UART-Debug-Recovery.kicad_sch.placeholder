@@ -1,6 +1,0 @@
-Sheet: 06-UART-Debug-Recovery.kicad_sch
-Scope: UART header, reset button, boot/recovery strap points.
-Inputs: UART0_TX, UART0_RX, +3V3_MAIN, GND, nRESET
-Outputs: RECOVERY_REQ, BOOT_SEL
-Symbols/Footprints: 1x4 or 1x6 2.54 mm header, reset switch, pull-up/down network.
-TODO: verify preferred header orientation and enclosure accessibility.

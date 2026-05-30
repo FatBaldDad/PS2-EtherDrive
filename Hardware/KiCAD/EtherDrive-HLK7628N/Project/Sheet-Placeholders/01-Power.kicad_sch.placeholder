@@ -1,6 +1,0 @@
-Sheet: 01-Power.kicad_sch
-Scope: PS2 input rail, filtering/protection, buck conversion to +3V3, optional USB +5V path.
-Inputs: VIN_PS2_8V5, GND
-Outputs: +3V3_MAIN, +5V_USB (if implemented), nRESET_SUP
-Symbols/Footprints: buck IC, inductor, Schottky/synchronous path parts, TVS, ferrites, bulk + decoupling caps.
-TODO: verify regulator topology and each package/land pattern from datasheets.

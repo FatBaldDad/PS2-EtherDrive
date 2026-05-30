@@ -1,6 +1,0 @@
-Sheet: 02-HLK7628N-Core.kicad_sch
-Scope: HLK-7628N module symbol, power pins, boot/reset straps, required decoupling and keepout notes.
-Inputs: +3V3_MAIN, nRESET, BOOT_SEL
-Outputs: ETH_*, USB_HOST_*, UART0_*, STATUS_*
-Symbols/Footprints: HLK-7628N module symbol + verified module footprint placeholder.
-TODO: verify complete pinout and orientation before symbol/footprint freeze.

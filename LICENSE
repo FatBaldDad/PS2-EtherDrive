@@ -1,31 +1,15 @@
-PS2-EtherDrive License
+PS2-EtherDrive Proprietary Notice and Limited Public Reference License
 
-Copyright (c) 2026 Fat Bald Dad / FBD Retro Game
+Copyright © 2026 Fat Bald Dad / FBD Retro Game. All rights reserved.
 
-All rights reserved.
+This repository is public for limited reference, project identification, documentation tracking, community awareness, and discussion only.
 
-This repository and its contents are provided for personal reference, documentation, educational, and community support purposes only.
+PS2-EtherDrive is not currently released as open-source hardware, open-source firmware, or open manufacturing documentation.
 
-You may:
-- View and reference the documentation
-- Share links to this repository
-- Discuss and reference the project within the community
+No permission is granted to manufacture, clone, sell, redistribute, rehost, package, or create derivative hardware, firmware, or products.
 
-You may NOT:
-- Manufacture hardware based on this project
-- Redistribute project files commercially
-- Sell derivative hardware products based on this project
-- Redistribute firmware binaries without permission
-- Rehost repository contents without permission
+Project name, branding, logo, artwork, and FBD identity may not be used for another product.
 
-Gerber files, manufacturing files, firmware source code, and certain project assets may intentionally remain private.
+Public documentation may expand later.
 
-This project is intended to become a commercial kit/product offered by FBD Retro Game.
-
-Commercial use, reproduction, manufacturing, or redistribution of this project or its derivatives without written permission is prohibited.
-
-THE SOFTWARE, DOCUMENTATION, AND PROJECT MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
-
-For licensing inquiries or collaboration requests, contact:
-F.B.D.RetroGame@gmail.com
-
+Production files may remain private.

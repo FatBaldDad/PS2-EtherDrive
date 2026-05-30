@@ -1,6 +1,0 @@
-Sheet: 05-PS2-Interface.kicad_sch
-Scope: PS2-side interface nets and any required level/conditioning/protection.
-Inputs: PS2_SIG_*, VIN_PS2_8V5, GND
-Outputs: CORE_IF_* (mapped into HLK core sheet)
-Symbols/Footprints: connector/header placeholders and protection passives.
-TODO: verify final PS2 signal list and connector mapping from hardware reference.
