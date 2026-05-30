@@ -1,24 +1,7 @@
-# PS2-EtherDrive Documentation
+# Public Documentation
 
-This folder contains the main project documentation for PS2-EtherDrive.
+This folder contains high-level public documentation for PS2-EtherDrive.
 
-The goal of this documentation is to explain the project, track design decisions, document installation planning, and provide support information as the project develops.
+Detailed implementation, development, manufacturing, and installation files are not included in this public repository.
 
-## Documents
-
-- [Project Overview](Project-Overview.md)
-- [Hardware Overview](Hardware-Overview.md)
-- [Software Overview](Software-Overview.md)
-- [Network Architecture](Network-Architecture.md)
-- [Power System](Power-System.md)
-- [Installation Planning](Installation-Planning.md)
-- [Compatibility](Compatibility.md)
-- [Known Issues](Known-Issues.md)
-- [FAQ](FAQ.md)
-- [UDPFS Integration](UDPFS-Integration.md)
-
-## Documentation Status
-
-This documentation is a work in progress.
-
-Some sections may describe planned features, prototype concepts, or early design goals that may change before production.
+Documentation may be expanded over time as the project matures.

@@ -1,6 +1,0 @@
-Sheet: 03-Ethernet-Interface.kicad_sch
-Scope: Ethernet differential pairs, magnetics/RJ45 strategy, ESD/EMI filtering and protection.
-Inputs: ETH_TX_P/N, ETH_RX_P/N, +3V3_MAIN, GND
-Outputs: ETH_LINK_LED, ETH_ACT_LED (if exposed)
-Symbols/Footprints: common-mode choke/magnetics option, TVS/ESD arrays, optional discrete EMI network.
-TODO: verify magnetics pin map and package dimensions from selected part datasheet.
