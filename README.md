@@ -12,7 +12,7 @@
 
 The goal is to create a cleaner, more integrated way for compatible PS2 systems to use network-based game loading, storage sharing, Wi-Fi bridging, and PS2-focused setup tools without relying on a bulky external network setup.
 
-This project is being developed as a future FBD kit, product, service install, or documented platform for the PlayStation 2 modding community.
+This project is being developed as a future FBD kit, product, service install, or documented platform for the PlayStation 2 modding community.  Here is where it all started https://bitbuilt.net/forums/threads/ps2-ultra-slim.5077/post-73650
 
 > [!IMPORTANT]
 > PS2-EtherDrive is currently in private development.
